@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Open+Sans&display=swap');
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.modal-card {
+  border: 1px solid yellow;
+  /*width: 400px;*/
+  padding: 1rem;
+}
+.background-black {
+  background-color: #000;
+}
+.show {
+  display: flex;
+}
+.nav-link {
+  font-family: 'Architects Daughter', cursive;
+  font-size: 1.5rem;
+  color: yellow;
+}
+
+.active {
+  text-shadow: 0 0 5px yellow, 0 0 5px yellow;
+}

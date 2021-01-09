@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'amaday-ng';
+  title = 'Amaday';
+  navbarItems = [
+    {link: 'Music', href: '/music'},
+    {link: 'Video', href: '/video'},
+  ];
+
+  showModal(): void {
+    document.querySelector('.modal').classList.add('show');
+  }
+
+  hideModal(): void {
+    document.querySelector('.modal').classList.remove('show');
+  }
 }

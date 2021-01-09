@@ -1,2 +1,33 @@
-<h1>Amaday.info</h1>
-<router-outlet></router-outlet>
+<div class="container">
+  <nav class="navbar navbar-expand-lg dark">
+    <div class="container-fluid">
+      <a class="nav-link" routerLink="/">Amaday</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item" *ngFor="let item of navbarItems">
+            <a class="nav-link" aria-current="page"
+               [routerLink]="item.href"
+               routerLinkActive="active">{{item.link}}</a>
+          </li>
+          <li class="nav-item" (click)="showModal()">
+            <a class="nav-link"
+            >Contacts</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>
+</div>
+<div class="modal" (click)="hideModal()">
+  <div class="modal-card">
+    <p>Координаты для организаторов концертов:</p>
+    <p>+7-953-748-91-32</p>
+    <p>amaday82@gmail.com</p>
+  </div>
+</div>
