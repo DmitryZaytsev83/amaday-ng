@@ -1,0 +1,17 @@
+.card, .card-body {
+  background-color: #000;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-wrapper h4 {
+  color: yellow;
+}
+
+.img-fluid {
+  border: 1px solid yellow;
+}
