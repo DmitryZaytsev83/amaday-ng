@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +12,16 @@ export class AppComponent {
     {link: 'Video', href: '/video'},
   ];
 
+  @ViewChild('modal') modal: ElementRef;
+
   showModal(): void {
-    document.querySelector('.modal').classList.add('show');
+    this.modal.nativeElement.classList.add('show');
+    if (window.navigator.userAgent.includes('Firefox')) {
+      this.modal.nativeElement.classList.add('background-black');
+    }
   }
 
   hideModal(): void {
-    document.querySelector('.modal').classList.remove('show');
+    this.modal.nativeElement.classList.remove('show');
   }
 }
